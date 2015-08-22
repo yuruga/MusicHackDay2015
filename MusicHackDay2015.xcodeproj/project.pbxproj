@@ -12,7 +12,7 @@
 		752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612A91B8861B2001FBA96 /* MainViewController.swift */; };
 		752612AD1B88634B001FBA96 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612AC1B88634B001FBA96 /* ExternalAccessory.framework */; };
 		752612B21B886C70001FBA96 /* HvcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612B11B886C70001FBA96 /* HvcManager.swift */; };
-		752612BE1B88BB4C001FBA96 /* libSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612B51B88BB4C001FBA96 /* libSDK.a */; };
+		752612DE1B88F2FD001FBA96 /* libSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612D51B88F2FD001FBA96 /* libSDK.a */; };
 		755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA011B86BCD100B013FE /* AppDelegate.swift */; };
 		755CCA091B86BCD100B013FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA081B86BCD100B013FE /* Images.xcassets */; };
 		755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */; };
@@ -44,14 +44,14 @@
 		752612A91B8861B2001FBA96 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		752612AC1B88634B001FBA96 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		752612B11B886C70001FBA96 /* HvcManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HvcManager.swift; sourceTree = "<group>"; };
-		752612B51B88BB4C001FBA96 /* libSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDK.a; sourceTree = "<group>"; };
-		752612B71B88BB4C001FBA96 /* BleDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceService.h; sourceTree = "<group>"; };
-		752612B81B88BB4C001FBA96 /* HVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC.h; sourceTree = "<group>"; };
-		752612B91B88BB4C001FBA96 /* HVC_BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_BLE.h; sourceTree = "<group>"; };
-		752612BA1B88BB4C001FBA96 /* HVC_PRM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_PRM.h; sourceTree = "<group>"; };
-		752612BB1B88BB4C001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
-		752612BC1B88BB4C001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
-		752612BD1B88BB4C001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
+		752612D51B88F2FD001FBA96 /* libSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDK.a; sourceTree = "<group>"; };
+		752612D71B88F2FD001FBA96 /* BleDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceService.h; sourceTree = "<group>"; };
+		752612D81B88F2FD001FBA96 /* HVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC.h; sourceTree = "<group>"; };
+		752612D91B88F2FD001FBA96 /* HVC_BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_BLE.h; sourceTree = "<group>"; };
+		752612DA1B88F2FD001FBA96 /* HVC_PRM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_PRM.h; sourceTree = "<group>"; };
+		752612DB1B88F2FD001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
+		752612DC1B88F2FD001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
+		752612DD1B88F2FD001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
 		755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHackDay2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755CCA001B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755CCA011B86BCD100B013FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			files = (
 				752612AD1B88634B001FBA96 /* ExternalAccessory.framework in Frameworks */,
 				755CCA331B86CF5C00B013FE /* CoreBluetooth.framework in Frameworks */,
-				752612BE1B88BB4C001FBA96 /* libSDK.a in Frameworks */,
+				752612DE1B88F2FD001FBA96 /* libSDK.a in Frameworks */,
 				755CCA311B86CF5200B013FE /* QuartzCore.framework in Frameworks */,
 				755CCA2E1B86CE7B00B013FE /* AVFoundation.framework in Frameworks */,
 				B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */,
@@ -118,33 +118,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		752612B31B88BB4C001FBA96 /* HVC */ = {
+		752612D31B88F2FD001FBA96 /* HVC */ = {
 			isa = PBXGroup;
 			children = (
-				752612B41B88BB4C001FBA96 /* lib */,
-				752612B61B88BB4C001FBA96 /* SDK */,
+				752612D41B88F2FD001FBA96 /* lib */,
+				752612D61B88F2FD001FBA96 /* SDK */,
 			);
 			path = HVC;
 			sourceTree = "<group>";
 		};
-		752612B41B88BB4C001FBA96 /* lib */ = {
+		752612D41B88F2FD001FBA96 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				752612B51B88BB4C001FBA96 /* libSDK.a */,
+				752612D51B88F2FD001FBA96 /* libSDK.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
 		};
-		752612B61B88BB4C001FBA96 /* SDK */ = {
+		752612D61B88F2FD001FBA96 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				752612B71B88BB4C001FBA96 /* BleDeviceService.h */,
-				752612B81B88BB4C001FBA96 /* HVC.h */,
-				752612B91B88BB4C001FBA96 /* HVC_BLE.h */,
-				752612BA1B88BB4C001FBA96 /* HVC_PRM.h */,
-				752612BB1B88BB4C001FBA96 /* HVC_RES.h */,
-				752612BC1B88BB4C001FBA96 /* HVC_VER.h */,
-				752612BD1B88BB4C001FBA96 /* HVCC_Define.h */,
+				752612D71B88F2FD001FBA96 /* BleDeviceService.h */,
+				752612D81B88F2FD001FBA96 /* HVC.h */,
+				752612D91B88F2FD001FBA96 /* HVC_BLE.h */,
+				752612DA1B88F2FD001FBA96 /* HVC_PRM.h */,
+				752612DB1B88F2FD001FBA96 /* HVC_RES.h */,
+				752612DC1B88F2FD001FBA96 /* HVC_VER.h */,
+				752612DD1B88F2FD001FBA96 /* HVCC_Define.h */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 		755CCA211B86C3D300B013FE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				752612B31B88BB4C001FBA96 /* HVC */,
+				752612D31B88F2FD001FBA96 /* HVC */,
 				755CCA2B1B86CDF100B013FE /* Spotify.framework */,
 			);
 			path = Libs;
@@ -298,6 +298,11 @@
 					755CC9FB1B86BCD100B013FE = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 3ETC2L2V76;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					755CCA101B86BCD100B013FE = {
 						CreatedOnToolsVersion = 6.4;
