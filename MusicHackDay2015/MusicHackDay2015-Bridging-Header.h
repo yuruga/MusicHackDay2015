@@ -6,3 +6,4 @@
 #import "AFNetworking.h"
 #import <Spotify/Spotify.h>
 #import "HVC_BLE.h"
+#import "HVCC_Define.h"

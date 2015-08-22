@@ -24,7 +24,6 @@
 #import <Foundation/Foundation.h>
 
 // Define ERROR CODE
-/*
 typedef enum : NSInteger
 {
     // Normal end
@@ -46,32 +45,8 @@ typedef enum : NSInteger
     // Receive data signal timeout error
     HVC_ERROR_DATA_TIMEOUT = -22,
 } HVC_ERRORCODE;
-*/
-typedef NS_OPTIONS(NSInteger, HVC_ERRORCODE)
-{
-    // Normal end
-    HVC_NORMAL = 0,
-    // Parameter error
-    HVC_ERROR_PARAMETER = -1,
-    // Device error
-    HVC_ERROR_NODEVICES = -2,
-    // Connection error
-    HVC_ERROR_DISCONNECTED = -3,
-    // Cannot re-input
-    HVC_ERROR_BUSY = -4,
-    // Send signal timeout error
-    HVC_ERROR_SENDDATA = -10,
-    // Receive header signal timeout error
-    HVC_ERROR_HEADER_TIMEOUT = -20,
-    // Invalid header error
-    HVC_ERROR_HEADER_INVALID = -21,
-    // Receive data signal timeout error
-    HVC_ERROR_DATA_TIMEOUT = -22,
-};
-
 
 // Define Execution Function
-/*
 typedef enum : NSInteger
 {
     // Human Body Detection
@@ -93,32 +68,8 @@ typedef enum : NSInteger
     // Expression Estimation
     HVC_ACTIV_EXPRESSION_ESTIMATION = 0x00000100,
 } HVC_FUNCTION;
-*/
-typedef NS_OPTIONS(NSInteger, HVC_FUNCTION)
-{
-    // 人体検出
-    HVC_ACTIV_BODY_DETECTION        = 0x00000001,
-    // 手検出
-    HVC_ACTIV_HAND_DETECTION        = 0x00000002,
-    // 顔検出
-    HVC_ACTIV_FACE_DETECTION        = 0x00000004,
-    // 顔方向検出
-    HVC_ACTIV_FACE_DIRECTION        = 0x00000008,
-    // 年齢推定
-    HVC_ACTIV_AGE_ESTIMATION        = 0x00000010,
-    // 性別推定
-    HVC_ACTIV_GENDER_ESTIMATION     = 0x00000020,
-    // 視線推定
-    HVC_ACTIV_GAZE_ESTIMATION       = 0x00000040,
-    // 目つむり推定
-    HVC_ACTIV_BLINK_ESTIMATION      = 0x00000080,
-    // 表情推定
-    HVC_ACTIV_EXPRESSION_ESTIMATION = 0x00000100,
-};
-
 
 // Gender
-/*
 typedef enum : NSInteger
 {
     // Female
@@ -126,17 +77,8 @@ typedef enum : NSInteger
     // Male
     HVC_GEN_MALE = 1,
 } HVC_GENDER;
-*/
-typedef NS_OPTIONS(NSInteger, HVC_GENDER)
-{
-    // Female
-    HVC_GEN_FEMALE = 0,
-    // Male
-    HVC_GEN_MALE = 1,
-};
 
 // Expression
-/*
 typedef enum : NSInteger
 {
     // Neutral
@@ -150,21 +92,6 @@ typedef enum : NSInteger
     // Sadness
     HVC_EX_SADNESS = 5,
 } HVC_EXPRESSION;
-*/
-typedef NS_OPTIONS(NSInteger, HVC_EXPRESSION)
-{
-    // Neutral
-    HVC_EX_NEUTRAL = 1,
-    // Happiness
-    HVC_EX_HAPPINESS = 2,
-    // Surprise
-    HVC_EX_SURPRISE = 3,
-    // Anger
-    HVC_EX_ANGER = 4,
-    // Sadness
-    HVC_EX_SADNESS = 5,
-};
-
 
 // Camera angle
 typedef enum : NSInteger
