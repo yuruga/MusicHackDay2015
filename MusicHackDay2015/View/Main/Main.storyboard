@@ -25,7 +25,16 @@
                             <outlet property="delegate" destination="fAA-Xa-h0f" id="rM2-PX-sXZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ABB-A0-RjD"/>
+                    <navigationItem key="navigationItem" id="ABB-A0-RjD" userLabel="OmronDevices">
+                        <barButtonItem key="rightBarButtonItem" title="Connect" id="omn-3W-5eh" userLabel="Refresh">
+                            <connections>
+                                <action selector="searchDevices:" destination="fAA-Xa-h0f" id="9BC-9v-8At"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnRefresh" destination="omn-3W-5eh" id="edI-7O-G3Q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXB-So-THl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
