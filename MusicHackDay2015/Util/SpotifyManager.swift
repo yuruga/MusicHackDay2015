@@ -62,43 +62,6 @@ class SpotifyManager: NSObject, SPTAuthViewDelegate {
         )
     }
     
-    //トラック再生
-    func playTrackWithSession(
-        session: SPTSession,
-        track: String,
-        callbackSuccess:(SPTAudioStreamingController, SPTCoreAudioController)->Void,
-        callbackFail:(NSError)->Void) {
-            //オーディオコントロール
-            var audio = SPTCoreAudioController()
-            
-            
-            //ストリームコントロール
-            var player = SPTAudioStreamingController(
-                clientId: SPT_CLIENT_ID,
-                audioController: audio
-            )
-            
-            //ログインして再生
-            player?.loginWithSession(session, callback: { (err: NSError!) -> Void in
-                if err != nil {
-                    println("error: \(err.localizedDescription)")
-                }else{
-                    let track = NSURL(string: track)
-                    let arr: [AnyObject] = [track as! AnyObject]
-                    player?.playURIs(arr, fromIndex: 0, callback: { (err: NSError!) -> Void in
-                        if err != nil {
-                            println("error: \(err.localizedDescription)")
-                            callbackFail(err)
-                        }else{
-                            callbackSuccess(player, audio)
-                        }
-                    })
-                }
-            })
-            
-            
-    }
-    
     //MARK: delegate
     func authenticationViewController(authenticationViewController: SPTAuthViewController!, didLoginWithSession session: SPTSession!) {
         println("didLoginWithSession")

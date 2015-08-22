@@ -60,16 +60,8 @@ class MainViewController: UITableViewController, UITableViewDataSource {
                 let trackStr = "spotify:track:58s6EuEYJdlb0kO7awm3Vp"
                 
                 //再生
-                SpotifyManager.defaultInstance().playTrackWithSession(
-                    session,
-                    track: trackStr,
-                    callbackSuccess: { (stream: SPTAudioStreamingController, audio: SPTCoreAudioController) -> Void in
-                    
-                    
-                    }, callbackFail: { (error: NSError) -> Void in
-                    
-                    }
-                )
+                self.playWithSession(session, track: trackStr)
+                
             },
             callbackFail: { () -> Void in
                 println("login fail...")
@@ -87,55 +79,9 @@ class MainViewController: UITableViewController, UITableViewDataSource {
             ),
             dispatch_get_main_queue(), closure)
     }
-    /*
-    func requestAuthToPlay() {
-        //Spotify
-        let auth = SPTAuth.defaultInstance()
-        auth.clientID = SPT_CLIENT_ID
-        auth.redirectURL = NSURL(string: "yurugamhd://callback")
-        auth.requestedScopes = [SPTAuthStreamingScope]
-        
-        //認証用URL
-        let loginUrl = auth.loginURL
-        
-        //ブラウザ表示
-        delay(0.1) {
-            if UIApplication.sharedApplication().canOpenURL(loginUrl!){
-                UIApplication.sharedApplication().openURL(loginUrl!)
-            }
-            return
-        }
-    }
     
-    func receiveAuth(url: NSURL!) {
-        if SPTAuth.defaultInstance().canHandleURL(url) {
-            SPTAuth.defaultInstance().handleAuthCallbackWithTriggeredAuthURL(url, callback: { (err: NSError!, session: SPTSession!) -> Void in
-                if err != nil {
-                    println("Auth Error: \(err.localizedDescription)")
-                    return
-                }
-                
-                //再生
-                self.playWithSession(session)
-            })
-        }
-    }
-
-
-    
-    func createSessionToPlay(token: String!) {
-        //セッション取得
-        let session = SPTSession(
-            userName: SPT_USERNAME,
-            accessToken: token,
-            expirationTimeInterval: 7*24*60*60
-        )
-        
-        //再生
-        self.playWithSession(session)
-    }
-
-    func playWithSession(session: SPTSession!) {
+    //再生
+    func playWithSession(session: SPTSession!, track: String) {
         //オーディオコントロール
         _audio = SPTCoreAudioController()
         
@@ -151,18 +97,17 @@ class MainViewController: UITableViewController, UITableViewDataSource {
             if err != nil {
                 println("error: \(err.localizedDescription)")
             }else{
-                let track = NSURL(string: "spotify:track:58s6EuEYJdlb0kO7awm3Vp")
+                let track = NSURL(string: track)
                 let arr: [AnyObject] = [track as! AnyObject]
                 self._player?.playURIs(arr, fromIndex: 0, callback: { (err: NSError!) -> Void in
                     if err != nil {
                         println("error: \(err.localizedDescription)")
+                    }else{
+                        println("PlayMusic")
                     }
-                    println("PlayMusic")
                 })
             }
         })
     }
-*/
-
 }
 
