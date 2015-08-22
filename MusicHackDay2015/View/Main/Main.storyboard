@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CoB-yJ-KD8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KDL-XX-TQN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -40,6 +40,57 @@
             </objects>
             <point key="canvasLocation" x="2917" y="664"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="9Z8-eE-00z">
+            <objects>
+                <viewController id="Qnz-WD-4wS" customClass="MainViewController" customModule="MusicHackDay2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ee3-JW-oul"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFY-zM-FGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xIE-CR-GMi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-Ya-ZDt">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.73725490199999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="P7m-f7-hAG"/>
+                                    <constraint firstAttribute="height" constant="300" id="eeh-9y-JkG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="audioPlay:" destination="Qnz-WD-4wS" eventType="touchUpInside" id="pFY-6Z-YZ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jaP-Ya-ZDt" secondAttribute="centerX" id="55B-dN-9bq"/>
+                            <constraint firstAttribute="centerY" secondItem="jaP-Ya-ZDt" secondAttribute="centerY" id="9WS-Ll-gfX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Egx-ZU-1ZY" userLabel="DeviceCTL">
+                        <barButtonItem key="rightBarButtonItem" title="Connect" id="V47-Yd-w2f" userLabel="Refresh">
+                            <connections>
+                                <action selector="searchDevices:" destination="Qnz-WD-4wS" id="APO-hf-KQe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnPlay" destination="jaP-Ya-ZDt" id="eJX-aJ-ueW"/>
+                        <outlet property="btnRefresh" destination="V47-Yd-w2f" id="2ZG-JR-FnO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaP-Dm-s9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4098" y="-64"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BBU-oI-Yfl">
             <objects>
@@ -57,6 +108,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrn-zA-LOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2105" y="664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lfr-Q4-V5h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KDL-XX-TQN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6WZ-2L-c97">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qnz-WD-4wS" kind="relationship" relationship="rootViewController" id="TJe-gX-adK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1S-8R-Xzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3316" y="-64"/>
         </scene>
     </scenes>
 </document>

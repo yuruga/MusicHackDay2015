@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MainViewController: UITableViewController, UITableViewDataSource, UIPopoverControllerDelegate {
+class MainViewController: UIViewController, UIPopoverControllerDelegate {
 
     @IBOutlet weak var btnRefresh: UIBarButtonItem!
+    @IBOutlet weak var btnPlay: UIButton!
     
     private var _audio: SPTCoreAudioController?
     private var _player: SPTAudioStreamingController?
@@ -21,6 +22,8 @@ class MainViewController: UITableViewController, UITableViewDataSource, UIPopove
         // Do any additional setup after loading the view, typically from a nib.
         //既存の接続を切る
         HvcManager.defaultInstance().disconnect()
+        
+        btnPlay.enabled = false
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -45,6 +48,12 @@ class MainViewController: UITableViewController, UITableViewDataSource, UIPopove
             name: EVENT_DEVICE_SCAN_FINISH,
             object: nil
         )
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "updateDeviceData:",
+            name: EVENT_DEVICE_RECEIVE_DATA,
+            object: nil
+        )
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -64,17 +73,32 @@ class MainViewController: UITableViewController, UITableViewDataSource, UIPopove
         }
         btnRefresh.enabled = false
     }
+    @IBAction func audioPlay(sender: AnyObject!) {
+        btnPlay.setTitle("Play", forState: UIControlState.Normal)
+        if btnPlay.titleLabel?.text == "Play" {
+            AudioManager.defaultInstance().play()
+            btnPlay.setTitle("Pause", forState: UIControlState.Normal)
+        }else{
+            AudioManager.defaultInstance().pause()
+            btnPlay.setTitle("Play", forState: UIControlState.Normal)
+        }
+    }
     
     func connectedDevice(notification:NSNotification){
         btnRefresh.title = "Disconnect"
         btnRefresh.tag = 1
         btnRefresh.enabled = true
+        btnPlay.enabled = true
     }
     
     func disconnectedDevice(notification:NSNotification){
         btnRefresh.title = "Connect"
         btnRefresh.tag = 0
         btnRefresh.enabled = true
+        btnPlay.enabled = false
+        
+        AudioManager.defaultInstance().pause()
+        btnPlay.setTitle("Play", forState: UIControlState.Normal)
     }
     
     func showDevices(notification:NSNotification){
@@ -108,10 +132,65 @@ class MainViewController: UITableViewController, UITableViewDataSource, UIPopove
         self.presentViewController(ac, animated: true, completion: nil)
     }
     
+    //デバイスデータ更新
+    func updateDeviceData(notification:NSNotification){
+        
+        var data = HvcManager.defaultInstance().getDeviceData()
+        if data != nil {
+            println("====001")
+            if data["HumanBody"]?.count > 0 {
+                println("====002")
+                let body = data["HumanBody"]?.first
+                println("===> \(body)")
+            }
+        }
+    }
+
+    /*
+    face.append([
+    "size": fd.size(),
+    "x": fd.posX(),
+    "y": fd.posY(),
+    "confidence": fd.confidence(),
+    "yaw": fd.dir().yaw(),
+    "pitch": fd.dir().pitch(),
+    "roll": fd.dir().roll(),
+    "dir_confidence": fd.dir().confidence()
+    ])
+*/
+    
+    
+/**
+    volume: 0 ~ 100
+    pan: -1 ~ 1　※左-右
+    distortion: 0 ~100
+    distortionGain: -10~0(?) ※distortionの感じが変わる
+    reverb : 0 ~100
+    delay : 0~100
+    delayTime : 0~2 ※delayの間隔(秒)
+    hipass : 0~20000位？※この周波数以上を通す(Hz)
+    lowpass : 0~20000位？※この周波数以下を通す(Hz)
+    
+    が実装されてるはずです
+    
+    AudioManger.defaultInstance.getAudio(0).volume(50)
+**/
+    
+    
+    
+
     
     
     
     
+    
+    
+    
+    
+    
+    
+    
+//================= 未使用 ====================
     
     
     //MARK: instance methods

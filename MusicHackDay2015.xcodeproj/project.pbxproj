@@ -13,6 +13,8 @@
 		752612AD1B88634B001FBA96 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612AC1B88634B001FBA96 /* ExternalAccessory.framework */; };
 		752612B21B886C70001FBA96 /* HvcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612B11B886C70001FBA96 /* HvcManager.swift */; };
 		752612DE1B88F2FD001FBA96 /* libSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612D51B88F2FD001FBA96 /* libSDK.a */; };
+		752612E51B89078D001FBA96 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612E41B89078D001FBA96 /* AudioManager.swift */; };
+		752612F41B890F1C001FBA96 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 752612F31B890F1C001FBA96 /* audio */; };
 		755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA011B86BCD100B013FE /* AppDelegate.swift */; };
 		755CCA091B86BCD100B013FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA081B86BCD100B013FE /* Images.xcassets */; };
 		755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */; };
@@ -52,6 +54,8 @@
 		752612DB1B88F2FD001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
 		752612DC1B88F2FD001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
 		752612DD1B88F2FD001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
+		752612E41B89078D001FBA96 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		752612F31B890F1C001FBA96 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHackDay2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755CCA001B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755CCA011B86BCD100B013FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		755CC9FF1B86BCD100B013FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				752612F31B890F1C001FBA96 /* audio */,
 				755CCA001B86BCD100B013FE /* Info.plist */,
 				7526128F1B882678001FBA96 /* PrefixHeader.pch */,
 				755CCA271B86CD8D00B013FE /* MusicHackDay2015-Bridging-Header.h */,
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				755CCA361B86D07F00B013FE /* Share.swift */,
+				752612E41B89078D001FBA96 /* AudioManager.swift */,
 				755CCA341B86CF9300B013FE /* BluetoothManager.swift */,
 				752612921B8828C2001FBA96 /* SpotifyManager.swift */,
 				752612B11B886C70001FBA96 /* HvcManager.swift */,
@@ -337,6 +343,7 @@
 				752612AA1B8861B2001FBA96 /* Main.storyboard in Resources */,
 				755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */,
 				755CCA091B86BCD100B013FE /* Images.xcassets in Resources */,
+				752612F41B890F1C001FBA96 /* audio in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				755CCA371B86D07F00B013FE /* Share.swift in Sources */,
+				752612E51B89078D001FBA96 /* AudioManager.swift in Sources */,
 				752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */,
 				752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */,
 				755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */,

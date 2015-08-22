@@ -25,6 +25,7 @@ class HvcManager: NSObject, HVC_Delegate {
     private var _hvc:HVC_BLE!
     private var _devices:[CBPeripheral] = []
     private var _deviceSearchCount:Int = 0
+    private var _deviceData:Dictionary<String, [Dictionary<String, Int32>]>!
     
     //デバイス探索
     func deviceSearch() {
@@ -79,6 +80,10 @@ class HvcManager: NSObject, HVC_Delegate {
     
     func getDevices() -> ([CBPeripheral]) {
         return _devices
+    }
+    
+    func getDeviceData() -> (Dictionary<String, [Dictionary<String, Int32>]>!) {
+        return _deviceData
     }
     
     func connect(device:CBPeripheral) {
@@ -222,9 +227,13 @@ class HvcManager: NSObject, HVC_Delegate {
             data["Exp"] = exp
         }
         
-        //データ送出
-        NSNotificationCenter.defaultCenter().postNotificationName(EVENT_DEVICE_RECEIVE_DATA, object: data as? AnyObject)
+        //最新データ格納
+        _deviceData = data
         
+        //データ送出
+        NSNotificationCenter.defaultCenter().postNotificationName(EVENT_DEVICE_RECEIVE_DATA, object: nil)
+        
+        //次の取得実行
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
             self._hvc.Execute(self._executeFlag, result: result)
         });
