@@ -5,3 +5,4 @@
 #import "PrefixHeader.pch"
 #import "AFNetworking.h"
 #import <Spotify/Spotify.h>
+#import "HVC_BLE.h"

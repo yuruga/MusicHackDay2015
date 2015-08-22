@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612921B8828C2001FBA96 /* SpotifyManager.swift */; };
-		752612A21B885FD2001FBA96 /* BleDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612961B885FD2001FBA96 /* BleDeviceService.m */; };
-		752612A31B885FD2001FBA96 /* HVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612981B885FD2001FBA96 /* HVC.m */; };
-		752612A41B885FD2001FBA96 /* HVC_BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129A1B885FD2001FBA96 /* HVC_BLE.m */; };
-		752612A51B885FD2001FBA96 /* HVC_PRM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129C1B885FD2001FBA96 /* HVC_PRM.m */; };
-		752612A61B885FD2001FBA96 /* HVC_RES.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129E1B885FD2001FBA96 /* HVC_RES.m */; };
-		752612A71B885FD2001FBA96 /* HVC_VER.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612A01B885FD2001FBA96 /* HVC_VER.m */; };
 		752612AA1B8861B2001FBA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752612A81B8861B2001FBA96 /* Main.storyboard */; };
 		752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612A91B8861B2001FBA96 /* MainViewController.swift */; };
+		752612AD1B88634B001FBA96 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612AC1B88634B001FBA96 /* ExternalAccessory.framework */; };
+		752612B21B886C70001FBA96 /* HvcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612B11B886C70001FBA96 /* HvcManager.swift */; };
+		752612BE1B88BB4C001FBA96 /* libSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 752612B51B88BB4C001FBA96 /* libSDK.a */; };
 		755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA011B86BCD100B013FE /* AppDelegate.swift */; };
 		755CCA091B86BCD100B013FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA081B86BCD100B013FE /* Images.xcassets */; };
 		755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */; };
@@ -27,9 +24,6 @@
 		755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA341B86CF9300B013FE /* BluetoothManager.swift */; };
 		755CCA371B86D07F00B013FE /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA361B86D07F00B013FE /* Share.swift */; };
 		B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */; };
-		BA30887B1B88638300BAB0B2 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA30887A1B88638300BAB0B2 /* AudioManager.swift */; };
-		BAA428FB1B8900720086A4F3 /* TestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA428FA1B8900720086A4F3 /* TestMain.swift */; };
-		BACAC8571B886B7F0069EDC9 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = BACAC8561B886B7F0069EDC9 /* audio */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,21 +40,18 @@
 		25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.release.xcconfig"; sourceTree = "<group>"; };
 		7526128F1B882678001FBA96 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		752612921B8828C2001FBA96 /* SpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
-		752612951B885FD2001FBA96 /* BleDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceService.h; sourceTree = "<group>"; };
-		752612961B885FD2001FBA96 /* BleDeviceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDeviceService.m; sourceTree = "<group>"; };
-		752612971B885FD2001FBA96 /* HVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC.h; sourceTree = "<group>"; };
-		752612981B885FD2001FBA96 /* HVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC.m; sourceTree = "<group>"; };
-		752612991B885FD2001FBA96 /* HVC_BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_BLE.h; sourceTree = "<group>"; };
-		7526129A1B885FD2001FBA96 /* HVC_BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_BLE.m; sourceTree = "<group>"; };
-		7526129B1B885FD2001FBA96 /* HVC_PRM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_PRM.h; sourceTree = "<group>"; };
-		7526129C1B885FD2001FBA96 /* HVC_PRM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_PRM.m; sourceTree = "<group>"; };
-		7526129D1B885FD2001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
-		7526129E1B885FD2001FBA96 /* HVC_RES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_RES.m; sourceTree = "<group>"; };
-		7526129F1B885FD2001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
-		752612A01B885FD2001FBA96 /* HVC_VER.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_VER.m; sourceTree = "<group>"; };
-		752612A11B885FD2001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
 		752612A81B8861B2001FBA96 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		752612A91B8861B2001FBA96 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		752612AC1B88634B001FBA96 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		752612B11B886C70001FBA96 /* HvcManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HvcManager.swift; sourceTree = "<group>"; };
+		752612B51B88BB4C001FBA96 /* libSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDK.a; sourceTree = "<group>"; };
+		752612B71B88BB4C001FBA96 /* BleDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceService.h; sourceTree = "<group>"; };
+		752612B81B88BB4C001FBA96 /* HVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC.h; sourceTree = "<group>"; };
+		752612B91B88BB4C001FBA96 /* HVC_BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_BLE.h; sourceTree = "<group>"; };
+		752612BA1B88BB4C001FBA96 /* HVC_PRM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_PRM.h; sourceTree = "<group>"; };
+		752612BB1B88BB4C001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
+		752612BC1B88BB4C001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
+		752612BD1B88BB4C001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
 		755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHackDay2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755CCA001B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755CCA011B86BCD100B013FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +67,6 @@
 		755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		755CCA341B86CF9300B013FE /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		755CCA361B86D07F00B013FE /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
-		BA30887A1B88638300BAB0B2 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		BAA428FA1B8900720086A4F3 /* TestMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMain.swift; sourceTree = "<group>"; };
-		BACAC8561B886B7F0069EDC9 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHackDay2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1912A573BE5C429D461357B /* Pods-MusicHackDay2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752612AD1B88634B001FBA96 /* ExternalAccessory.framework in Frameworks */,
 				755CCA331B86CF5C00B013FE /* CoreBluetooth.framework in Frameworks */,
+				752612BE1B88BB4C001FBA96 /* libSDK.a in Frameworks */,
 				755CCA311B86CF5200B013FE /* QuartzCore.framework in Frameworks */,
 				755CCA2E1B86CE7B00B013FE /* AVFoundation.framework in Frameworks */,
 				B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */,
@@ -109,6 +99,7 @@
 		4100F0B51E2CF20ACE2373DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				752612AC1B88634B001FBA96 /* ExternalAccessory.framework */,
 				755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */,
 				755CCA301B86CF5200B013FE /* QuartzCore.framework */,
 				755CCA2D1B86CE7B00B013FE /* AVFoundation.framework */,
@@ -127,24 +118,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		752612941B885FD2001FBA96 /* Omron */ = {
+		752612B31B88BB4C001FBA96 /* HVC */ = {
 			isa = PBXGroup;
 			children = (
-				752612951B885FD2001FBA96 /* BleDeviceService.h */,
-				752612961B885FD2001FBA96 /* BleDeviceService.m */,
-				752612971B885FD2001FBA96 /* HVC.h */,
-				752612981B885FD2001FBA96 /* HVC.m */,
-				752612991B885FD2001FBA96 /* HVC_BLE.h */,
-				7526129A1B885FD2001FBA96 /* HVC_BLE.m */,
-				7526129B1B885FD2001FBA96 /* HVC_PRM.h */,
-				7526129C1B885FD2001FBA96 /* HVC_PRM.m */,
-				7526129D1B885FD2001FBA96 /* HVC_RES.h */,
-				7526129E1B885FD2001FBA96 /* HVC_RES.m */,
-				7526129F1B885FD2001FBA96 /* HVC_VER.h */,
-				752612A01B885FD2001FBA96 /* HVC_VER.m */,
-				752612A11B885FD2001FBA96 /* HVCC_Define.h */,
+				752612B41B88BB4C001FBA96 /* lib */,
+				752612B61B88BB4C001FBA96 /* SDK */,
 			);
-			path = Omron;
+			path = HVC;
+			sourceTree = "<group>";
+		};
+		752612B41B88BB4C001FBA96 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				752612B51B88BB4C001FBA96 /* libSDK.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		752612B61B88BB4C001FBA96 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				752612B71B88BB4C001FBA96 /* BleDeviceService.h */,
+				752612B81B88BB4C001FBA96 /* HVC.h */,
+				752612B91B88BB4C001FBA96 /* HVC_BLE.h */,
+				752612BA1B88BB4C001FBA96 /* HVC_PRM.h */,
+				752612BB1B88BB4C001FBA96 /* HVC_RES.h */,
+				752612BC1B88BB4C001FBA96 /* HVC_VER.h */,
+				752612BD1B88BB4C001FBA96 /* HVCC_Define.h */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 		755CC9F31B86BCD100B013FE = {
@@ -170,7 +172,6 @@
 		755CC9FE1B86BCD100B013FE /* MusicHackDay2015 */ = {
 			isa = PBXGroup;
 			children = (
-				BACAC8561B886B7F0069EDC9 /* audio */,
 				755CCA381B86D1B400B013FE /* View */,
 				755CCA2F1B86CF1B00B013FE /* Util */,
 				755CCA011B86BCD100B013FE /* AppDelegate.swift */,
@@ -211,7 +212,7 @@
 		755CCA211B86C3D300B013FE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				752612941B885FD2001FBA96 /* Omron */,
+				752612B31B88BB4C001FBA96 /* HVC */,
 				755CCA2B1B86CDF100B013FE /* Spotify.framework */,
 			);
 			path = Libs;
@@ -223,7 +224,7 @@
 				755CCA361B86D07F00B013FE /* Share.swift */,
 				755CCA341B86CF9300B013FE /* BluetoothManager.swift */,
 				752612921B8828C2001FBA96 /* SpotifyManager.swift */,
-				BA30887A1B88638300BAB0B2 /* AudioManager.swift */,
+				752612B11B886C70001FBA96 /* HvcManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -241,7 +242,6 @@
 			children = (
 				752612A91B8861B2001FBA96 /* MainViewController.swift */,
 				752612A81B8861B2001FBA96 /* Main.storyboard */,
-				BAA428FA1B8900720086A4F3 /* TestMain.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -297,6 +297,7 @@
 				TargetAttributes = {
 					755CC9FB1B86BCD100B013FE = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3ETC2L2V76;
 					};
 					755CCA101B86BCD100B013FE = {
 						CreatedOnToolsVersion = 6.4;
@@ -331,7 +332,6 @@
 				752612AA1B8861B2001FBA96 /* Main.storyboard in Resources */,
 				755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */,
 				755CCA091B86BCD100B013FE /* Images.xcassets in Resources */,
-				BACAC8571B886B7F0069EDC9 /* audio in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,17 +384,10 @@
 			files = (
 				755CCA371B86D07F00B013FE /* Share.swift in Sources */,
 				752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */,
-				752612A31B885FD2001FBA96 /* HVC.m in Sources */,
 				752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */,
-				752612A71B885FD2001FBA96 /* HVC_VER.m in Sources */,
-				752612A21B885FD2001FBA96 /* BleDeviceService.m in Sources */,
-				BA30887B1B88638300BAB0B2 /* AudioManager.swift in Sources */,
 				755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */,
-				752612A61B885FD2001FBA96 /* HVC_RES.m in Sources */,
-				752612A51B885FD2001FBA96 /* HVC_PRM.m in Sources */,
 				755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */,
-				BAA428FB1B8900720086A4F3 /* TestMain.swift in Sources */,
-				752612A41B885FD2001FBA96 /* HVC_BLE.m in Sources */,
+				752612B21B886C70001FBA96 /* HvcManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,7 +518,12 @@
 				);
 				INFOPLIST_FILE = MusicHackDay2015/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/HVC/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dd84cf2-0c7e-42bf-b8fc-9e031abbccb6";
 				SWIFT_OBJC_BRIDGING_HEADER = "MusicHackDay2015/MusicHackDay2015-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -536,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,7 +543,12 @@
 				);
 				INFOPLIST_FILE = MusicHackDay2015/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/HVC/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dd84cf2-0c7e-42bf-b8fc-9e031abbccb6";
 				SWIFT_OBJC_BRIDGING_HEADER = "MusicHackDay2015/MusicHackDay2015-Bridging-Header.h";
 			};
 			name = Release;
