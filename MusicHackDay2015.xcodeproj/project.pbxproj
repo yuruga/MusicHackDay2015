@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612921B8828C2001FBA96 /* SpotifyManager.swift */; };
+		755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA011B86BCD100B013FE /* AppDelegate.swift */; };
+		755CCA041B86BCD100B013FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA031B86BCD100B013FE /* MainViewController.swift */; };
+		755CCA071B86BCD100B013FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA051B86BCD100B013FE /* Main.storyboard */; };
+		755CCA091B86BCD100B013FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA081B86BCD100B013FE /* Images.xcassets */; };
+		755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */; };
+		755CCA181B86BCD100B013FE /* MusicHackDay2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA171B86BCD100B013FE /* MusicHackDay2015Tests.swift */; };
+		755CCA2C1B86CDF100B013FE /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CCA2B1B86CDF100B013FE /* Spotify.framework */; };
+		755CCA2E1B86CE7B00B013FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CCA2D1B86CE7B00B013FE /* AVFoundation.framework */; };
+		755CCA311B86CF5200B013FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CCA301B86CF5200B013FE /* QuartzCore.framework */; };
+		755CCA331B86CF5C00B013FE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */; };
+		755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA341B86CF9300B013FE /* BluetoothManager.swift */; };
+		755CCA371B86D07F00B013FE /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA361B86D07F00B013FE /* Share.swift */; };
+		B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		755CCA121B86BCD100B013FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755CC9F41B86BCD100B013FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755CC9FB1B86BCD100B013FE;
+			remoteInfo = MusicHackDay2015;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.release.xcconfig"; sourceTree = "<group>"; };
+		7526128F1B882678001FBA96 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		752612921B8828C2001FBA96 /* SpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
+		755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHackDay2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		755CCA001B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755CCA011B86BCD100B013FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		755CCA031B86BCD100B013FE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		755CCA061B86BCD100B013FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		755CCA081B86BCD100B013FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		755CCA0B1B86BCD100B013FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		755CCA111B86BCD100B013FE /* MusicHackDay2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackDay2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755CCA161B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755CCA171B86BCD100B013FE /* MusicHackDay2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHackDay2015Tests.swift; sourceTree = "<group>"; };
+		755CCA271B86CD8D00B013FE /* MusicHackDay2015-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicHackDay2015-Bridging-Header.h"; sourceTree = "<group>"; };
+		755CCA2B1B86CDF100B013FE /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = Spotify/Spotify.framework; sourceTree = "<group>"; };
+		755CCA2D1B86CE7B00B013FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		755CCA301B86CF5200B013FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		755CCA341B86CF9300B013FE /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		755CCA361B86D07F00B013FE /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHackDay2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1912A573BE5C429D461357B /* Pods-MusicHackDay2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		755CC9F91B86BCD100B013FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755CCA331B86CF5C00B013FE /* CoreBluetooth.framework in Frameworks */,
+				755CCA311B86CF5200B013FE /* QuartzCore.framework in Frameworks */,
+				755CCA2E1B86CE7B00B013FE /* AVFoundation.framework in Frameworks */,
+				B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */,
+				755CCA2C1B86CDF100B013FE /* Spotify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755CCA0E1B86BCD100B013FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4100F0B51E2CF20ACE2373DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */,
+				755CCA301B86CF5200B013FE /* QuartzCore.framework */,
+				755CCA2D1B86CE7B00B013FE /* AVFoundation.framework */,
+				755CCA211B86C3D300B013FE /* Libs */,
+				DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B4B172806C868E415CD992C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1912A573BE5C429D461357B /* Pods-MusicHackDay2015.debug.xcconfig */,
+				25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		755CC9F31B86BCD100B013FE = {
+			isa = PBXGroup;
+			children = (
+				755CC9FE1B86BCD100B013FE /* MusicHackDay2015 */,
+				755CCA141B86BCD100B013FE /* MusicHackDay2015Tests */,
+				755CC9FD1B86BCD100B013FE /* Products */,
+				4B4B172806C868E415CD992C /* Pods */,
+				4100F0B51E2CF20ACE2373DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		755CC9FD1B86BCD100B013FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */,
+				755CCA111B86BCD100B013FE /* MusicHackDay2015Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		755CC9FE1B86BCD100B013FE /* MusicHackDay2015 */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA381B86D1B400B013FE /* View */,
+				755CCA2F1B86CF1B00B013FE /* Util */,
+				755CCA011B86BCD100B013FE /* AppDelegate.swift */,
+				755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */,
+				755CCA081B86BCD100B013FE /* Images.xcassets */,
+				755CC9FF1B86BCD100B013FE /* Supporting Files */,
+			);
+			path = MusicHackDay2015;
+			sourceTree = "<group>";
+		};
+		755CC9FF1B86BCD100B013FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA001B86BCD100B013FE /* Info.plist */,
+				7526128F1B882678001FBA96 /* PrefixHeader.pch */,
+				755CCA271B86CD8D00B013FE /* MusicHackDay2015-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		755CCA141B86BCD100B013FE /* MusicHackDay2015Tests */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA171B86BCD100B013FE /* MusicHackDay2015Tests.swift */,
+				755CCA151B86BCD100B013FE /* Supporting Files */,
+			);
+			path = MusicHackDay2015Tests;
+			sourceTree = "<group>";
+		};
+		755CCA151B86BCD100B013FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA161B86BCD100B013FE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		755CCA211B86C3D300B013FE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA2B1B86CDF100B013FE /* Spotify.framework */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		755CCA2F1B86CF1B00B013FE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA361B86D07F00B013FE /* Share.swift */,
+				755CCA341B86CF9300B013FE /* BluetoothManager.swift */,
+				752612921B8828C2001FBA96 /* SpotifyManager.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		755CCA381B86D1B400B013FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA391B86D26F00B013FE /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		755CCA391B86D26F00B013FE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				755CCA031B86BCD100B013FE /* MainViewController.swift */,
+				755CCA051B86BCD100B013FE /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		755CC9FB1B86BCD100B013FE /* MusicHackDay2015 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755CCA1B1B86BCD100B013FE /* Build configuration list for PBXNativeTarget "MusicHackDay2015" */;
+			buildPhases = (
+				1CD881C35A64313623AD6EA6 /* Check Pods Manifest.lock */,
+				755CC9F81B86BCD100B013FE /* Sources */,
+				755CC9F91B86BCD100B013FE /* Frameworks */,
+				755CC9FA1B86BCD100B013FE /* Resources */,
+				80EC703F357895C57EAF6FDB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicHackDay2015;
+			productName = MusicHackDay2015;
+			productReference = 755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */;
+			productType = "com.apple.product-type.application";
+		};
+		755CCA101B86BCD100B013FE /* MusicHackDay2015Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755CCA1E1B86BCD100B013FE /* Build configuration list for PBXNativeTarget "MusicHackDay2015Tests" */;
+			buildPhases = (
+				755CCA0D1B86BCD100B013FE /* Sources */,
+				755CCA0E1B86BCD100B013FE /* Frameworks */,
+				755CCA0F1B86BCD100B013FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755CCA131B86BCD100B013FE /* PBXTargetDependency */,
+			);
+			name = MusicHackDay2015Tests;
+			productName = MusicHackDay2015Tests;
+			productReference = 755CCA111B86BCD100B013FE /* MusicHackDay2015Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		755CC9F41B86BCD100B013FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = yuruga;
+				TargetAttributes = {
+					755CC9FB1B86BCD100B013FE = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					755CCA101B86BCD100B013FE = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 755CC9FB1B86BCD100B013FE;
+					};
+				};
+			};
+			buildConfigurationList = 755CC9F71B86BCD100B013FE /* Build configuration list for PBXProject "MusicHackDay2015" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 755CC9F31B86BCD100B013FE;
+			productRefGroup = 755CC9FD1B86BCD100B013FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				755CC9FB1B86BCD100B013FE /* MusicHackDay2015 */,
+				755CCA101B86BCD100B013FE /* MusicHackDay2015Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		755CC9FA1B86BCD100B013FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755CCA071B86BCD100B013FE /* Main.storyboard in Resources */,
+				755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */,
+				755CCA091B86BCD100B013FE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755CCA0F1B86BCD100B013FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CD881C35A64313623AD6EA6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80EC703F357895C57EAF6FDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		755CC9F81B86BCD100B013FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755CCA041B86BCD100B013FE /* MainViewController.swift in Sources */,
+				755CCA371B86D07F00B013FE /* Share.swift in Sources */,
+				752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */,
+				755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */,
+				755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755CCA0D1B86BCD100B013FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755CCA181B86BCD100B013FE /* MusicHackDay2015Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		755CCA131B86BCD100B013FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755CC9FB1B86BCD100B013FE /* MusicHackDay2015 */;
+			targetProxy = 755CCA121B86BCD100B013FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		755CCA051B86BCD100B013FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755CCA061B86BCD100B013FE /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755CCA0B1B86BCD100B013FE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		755CCA191B86BCD100B013FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		755CCA1A1B86BCD100B013FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		755CCA1C1B86BCD100B013FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1912A573BE5C429D461357B /* Pods-MusicHackDay2015.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/Spotify",
+				);
+				INFOPLIST_FILE = MusicHackDay2015/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicHackDay2015/MusicHackDay2015-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		755CCA1D1B86BCD100B013FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/Spotify",
+				);
+				INFOPLIST_FILE = MusicHackDay2015/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicHackDay2015/MusicHackDay2015-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		755CCA1F1B86BCD100B013FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusicHackDay2015Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicHackDay2015.app/MusicHackDay2015";
+			};
+			name = Debug;
+		};
+		755CCA201B86BCD100B013FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusicHackDay2015Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicHackDay2015.app/MusicHackDay2015";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		755CC9F71B86BCD100B013FE /* Build configuration list for PBXProject "MusicHackDay2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755CCA191B86BCD100B013FE /* Debug */,
+				755CCA1A1B86BCD100B013FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755CCA1B1B86BCD100B013FE /* Build configuration list for PBXNativeTarget "MusicHackDay2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755CCA1C1B86BCD100B013FE /* Debug */,
+				755CCA1D1B86BCD100B013FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755CCA1E1B86BCD100B013FE /* Build configuration list for PBXNativeTarget "MusicHackDay2015Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755CCA1F1B86BCD100B013FE /* Debug */,
+				755CCA201B86BCD100B013FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 755CC9F41B86BCD100B013FE /* Project object */;
+}
