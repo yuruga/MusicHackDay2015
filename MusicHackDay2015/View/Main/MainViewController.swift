@@ -9,10 +9,7 @@
 import UIKit
 
 class MainViewController: UITableViewController, UITableViewDataSource {
-    
-//    private static let _USERNAME = "xlune999"
-//    private static let _CLIENT_ID = "963b6a541b954022bc4b4355c33978c8"
-//    private static let _ACCESS_TOKEN = "BQDzF8zy5RjMCzLI1DTHPs9JMH3hJozSQDiYhXbE8USavziO0dS4ectgP97ai1x0jcNhCO0EgsbKptAfBfsH0w"
+
     private var _audio: SPTCoreAudioController?
     private var _player: SPTAudioStreamingController?
     
@@ -31,20 +28,6 @@ class MainViewController: UITableViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//    func authenticationViewController(authenticationViewController: SPTAuthViewController!, didFailToLogin error: NSError!) {
-//        println("didFailToLogin")
-//    }
-//    
-//    func authenticationViewController(authenticationViewController: SPTAuthViewController!, didLoginWithSession session: SPTSession!) {
-//        println("didLoginWithSession")
-//        
-//        self.createSessionToPlay(session.accessToken)
-//    }
-//    
-//    func authenticationViewControllerDidCancelLogin(authenticationViewController: SPTAuthViewController!) {
-//       println("cancel")
-//    }
     
     //MARK: instance methods
     func showAuth() {
@@ -85,7 +68,6 @@ class MainViewController: UITableViewController, UITableViewDataSource {
         //オーディオコントロール
         _audio = SPTCoreAudioController()
         
-        
         //ストリームコントロール
         _player = SPTAudioStreamingController(
             clientId: SPT_CLIENT_ID,
@@ -104,10 +86,29 @@ class MainViewController: UITableViewController, UITableViewDataSource {
                         println("error: \(err.localizedDescription)")
                     }else{
                         println("PlayMusic")
+                        self._audio?.volume = 1.0
                     }
                 })
             }
         })
+        /*
+        _player?.loginWithSession(session, callback: { (err: NSError!) -> Void in
+            if err != nil {
+                println("error: \(err.localizedDescription)")
+            }else{
+                let track = NSURL(string: track)
+                let arr: [AnyObject] = [track as! AnyObject]
+                self._player?.playURIs(arr, fromIndex: 0, callback: { (err: NSError!) -> Void in
+                    if err != nil {
+                        println("error: \(err.localizedDescription)")
+                    }else{
+                        println("PlayMusic")
+                        self._audio?.volume = 1.0
+                    }
+                })
+            }
+        })
+        */
     }
 }
 

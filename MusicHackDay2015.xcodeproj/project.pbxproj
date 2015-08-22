@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612921B8828C2001FBA96 /* SpotifyManager.swift */; };
+		752612A21B885FD2001FBA96 /* BleDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612961B885FD2001FBA96 /* BleDeviceService.m */; };
+		752612A31B885FD2001FBA96 /* HVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612981B885FD2001FBA96 /* HVC.m */; };
+		752612A41B885FD2001FBA96 /* HVC_BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129A1B885FD2001FBA96 /* HVC_BLE.m */; };
+		752612A51B885FD2001FBA96 /* HVC_PRM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129C1B885FD2001FBA96 /* HVC_PRM.m */; };
+		752612A61B885FD2001FBA96 /* HVC_RES.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526129E1B885FD2001FBA96 /* HVC_RES.m */; };
+		752612A71B885FD2001FBA96 /* HVC_VER.m in Sources */ = {isa = PBXBuildFile; fileRef = 752612A01B885FD2001FBA96 /* HVC_VER.m */; };
+		752612AA1B8861B2001FBA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752612A81B8861B2001FBA96 /* Main.storyboard */; };
+		752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752612A91B8861B2001FBA96 /* MainViewController.swift */; };
 		755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA011B86BCD100B013FE /* AppDelegate.swift */; };
-		755CCA041B86BCD100B013FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA031B86BCD100B013FE /* MainViewController.swift */; };
-		755CCA071B86BCD100B013FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA051B86BCD100B013FE /* Main.storyboard */; };
 		755CCA091B86BCD100B013FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA081B86BCD100B013FE /* Images.xcassets */; };
 		755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */; };
 		755CCA181B86BCD100B013FE /* MusicHackDay2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA171B86BCD100B013FE /* MusicHackDay2015Tests.swift */; };
@@ -37,11 +43,24 @@
 		25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.release.xcconfig"; sourceTree = "<group>"; };
 		7526128F1B882678001FBA96 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		752612921B8828C2001FBA96 /* SpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
+		752612951B885FD2001FBA96 /* BleDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDeviceService.h; sourceTree = "<group>"; };
+		752612961B885FD2001FBA96 /* BleDeviceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDeviceService.m; sourceTree = "<group>"; };
+		752612971B885FD2001FBA96 /* HVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC.h; sourceTree = "<group>"; };
+		752612981B885FD2001FBA96 /* HVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC.m; sourceTree = "<group>"; };
+		752612991B885FD2001FBA96 /* HVC_BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_BLE.h; sourceTree = "<group>"; };
+		7526129A1B885FD2001FBA96 /* HVC_BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_BLE.m; sourceTree = "<group>"; };
+		7526129B1B885FD2001FBA96 /* HVC_PRM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_PRM.h; sourceTree = "<group>"; };
+		7526129C1B885FD2001FBA96 /* HVC_PRM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_PRM.m; sourceTree = "<group>"; };
+		7526129D1B885FD2001FBA96 /* HVC_RES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_RES.h; sourceTree = "<group>"; };
+		7526129E1B885FD2001FBA96 /* HVC_RES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_RES.m; sourceTree = "<group>"; };
+		7526129F1B885FD2001FBA96 /* HVC_VER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVC_VER.h; sourceTree = "<group>"; };
+		752612A01B885FD2001FBA96 /* HVC_VER.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVC_VER.m; sourceTree = "<group>"; };
+		752612A11B885FD2001FBA96 /* HVCC_Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVCC_Define.h; sourceTree = "<group>"; };
+		752612A81B8861B2001FBA96 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		752612A91B8861B2001FBA96 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		755CC9FC1B86BCD100B013FE /* MusicHackDay2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHackDay2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755CCA001B86BCD100B013FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755CCA011B86BCD100B013FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		755CCA031B86BCD100B013FE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
-		755CCA061B86BCD100B013FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		755CCA081B86BCD100B013FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		755CCA0B1B86BCD100B013FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		755CCA111B86BCD100B013FE /* MusicHackDay2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackDay2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +119,26 @@
 				25AF3831B281C07E346C1721 /* Pods-MusicHackDay2015.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		752612941B885FD2001FBA96 /* Omron */ = {
+			isa = PBXGroup;
+			children = (
+				752612951B885FD2001FBA96 /* BleDeviceService.h */,
+				752612961B885FD2001FBA96 /* BleDeviceService.m */,
+				752612971B885FD2001FBA96 /* HVC.h */,
+				752612981B885FD2001FBA96 /* HVC.m */,
+				752612991B885FD2001FBA96 /* HVC_BLE.h */,
+				7526129A1B885FD2001FBA96 /* HVC_BLE.m */,
+				7526129B1B885FD2001FBA96 /* HVC_PRM.h */,
+				7526129C1B885FD2001FBA96 /* HVC_PRM.m */,
+				7526129D1B885FD2001FBA96 /* HVC_RES.h */,
+				7526129E1B885FD2001FBA96 /* HVC_RES.m */,
+				7526129F1B885FD2001FBA96 /* HVC_VER.h */,
+				752612A01B885FD2001FBA96 /* HVC_VER.m */,
+				752612A11B885FD2001FBA96 /* HVCC_Define.h */,
+			);
+			path = Omron;
 			sourceTree = "<group>";
 		};
 		755CC9F31B86BCD100B013FE = {
@@ -165,6 +204,7 @@
 		755CCA211B86C3D300B013FE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				752612941B885FD2001FBA96 /* Omron */,
 				755CCA2B1B86CDF100B013FE /* Spotify.framework */,
 			);
 			path = Libs;
@@ -191,10 +231,10 @@
 		755CCA391B86D26F00B013FE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				755CCA031B86BCD100B013FE /* MainViewController.swift */,
-				755CCA051B86BCD100B013FE /* Main.storyboard */,
+				752612A91B8861B2001FBA96 /* MainViewController.swift */,
+				752612A81B8861B2001FBA96 /* Main.storyboard */,
 			);
-			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755CCA071B86BCD100B013FE /* Main.storyboard in Resources */,
+				752612AA1B8861B2001FBA96 /* Main.storyboard in Resources */,
 				755CCA0C1B86BCD100B013FE /* LaunchScreen.xib in Resources */,
 				755CCA091B86BCD100B013FE /* Images.xcassets in Resources */,
 			);
@@ -332,11 +372,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755CCA041B86BCD100B013FE /* MainViewController.swift in Sources */,
 				755CCA371B86D07F00B013FE /* Share.swift in Sources */,
+				752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */,
+				752612A31B885FD2001FBA96 /* HVC.m in Sources */,
 				752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */,
+				752612A71B885FD2001FBA96 /* HVC_VER.m in Sources */,
+				752612A21B885FD2001FBA96 /* BleDeviceService.m in Sources */,
 				755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */,
+				752612A61B885FD2001FBA96 /* HVC_RES.m in Sources */,
+				752612A51B885FD2001FBA96 /* HVC_PRM.m in Sources */,
 				755CCA021B86BCD100B013FE /* AppDelegate.swift in Sources */,
+				752612A41B885FD2001FBA96 /* HVC_BLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,15 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		755CCA051B86BCD100B013FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				755CCA061B86BCD100B013FE /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		755CCA0A1B86BCD100B013FE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
