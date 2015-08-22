@@ -24,6 +24,7 @@
 		755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA341B86CF9300B013FE /* BluetoothManager.swift */; };
 		755CCA371B86D07F00B013FE /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CCA361B86D07F00B013FE /* Share.swift */; };
 		B6A5A8F1AE150978CE0C2FBC /* libPods-MusicHackDay2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */; };
+		BAA428FD1B8902090086A4F3 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA428FC1B8902090086A4F3 /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		755CCA321B86CF5C00B013FE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		755CCA341B86CF9300B013FE /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		755CCA361B86D07F00B013FE /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		BAA428FC1B8902090086A4F3 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		DE4E97E3330338807D20BAF3 /* libPods-MusicHackDay2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicHackDay2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1912A573BE5C429D461357B /* Pods-MusicHackDay2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicHackDay2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicHackDay2015/Pods-MusicHackDay2015.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 		755CCA2F1B86CF1B00B013FE /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BAA428FC1B8902090086A4F3 /* AudioManager.swift */,
 				755CCA361B86D07F00B013FE /* Share.swift */,
 				755CCA341B86CF9300B013FE /* BluetoothManager.swift */,
 				752612921B8828C2001FBA96 /* SpotifyManager.swift */,
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				755CCA371B86D07F00B013FE /* Share.swift in Sources */,
+				BAA428FD1B8902090086A4F3 /* AudioManager.swift in Sources */,
 				752612AB1B8861B2001FBA96 /* MainViewController.swift in Sources */,
 				752612931B8828C2001FBA96 /* SpotifyManager.swift in Sources */,
 				755CCA351B86CF9300B013FE /* BluetoothManager.swift in Sources */,
