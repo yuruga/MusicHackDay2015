@@ -175,10 +175,10 @@ class MainViewController: UIViewController, UIPopoverControllerDelegate {
             
             //減衰
             AudioManager.defaultInstance().getAudio(0).volume(
-                AudioManager.defaultInstance().getAudio(0).getVolume() * 0.9
+                AudioManager.defaultInstance().getAudio(0).getVolume() * 0.75
             )
             AudioManager.defaultInstance().getAudio(1).volume(
-                AudioManager.defaultInstance().getAudio(1).getVolume() * 0.9
+                AudioManager.defaultInstance().getAudio(1).getVolume() * 0.75
             )
             
             if data["Face"]?.count > 0 {
@@ -195,13 +195,13 @@ class MainViewController: UIViewController, UIPopoverControllerDelegate {
                     var pitch = face["pitch"]! as Int32
                     var roll = face["roll"]! as Int32
                     
-                    let yawSize = Float(max(min(yaw, 20), -20)) / 20
+                    let yawSize = Float(max(min(yaw, 30), -30)) / 30
                     AudioManager.defaultInstance().getAudio(i).pan(yawSize)
                     
-                    let pitchSize = Float(max(min(abs(pitch), 50), 0)) / 50 * 10000
+                    let pitchSize = Float(max(min(abs(pitch), 50), 0)) / 50 * 8000
                     AudioManager.defaultInstance().getAudio(i).hipass(pitchSize)
                     
-                    let rollSize = Float(max(min(abs(roll), 15), 0)) / 15 * 100
+                    let rollSize = Float(max(min(abs(roll), 15), 0)) / 15 * 80
                     AudioManager.defaultInstance().getAudio(i).distortion(rollSize)
                     
                     if i == 0 {
