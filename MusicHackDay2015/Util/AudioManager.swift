@@ -11,22 +11,17 @@ import UIKit
 import AVFoundation
 
 class AudioManager : NSObject{
-    
-    //@IBOutlet weak var buttonPlay: UIButton!
-    
     //MARK: Singleton
-    
     static let _instance = AudioManager()
     static func defaultInstance() -> (AudioManager) {
         return _instance;
     }
     
     private var _audios:[Audio]
-    
     private let audioEngine: AVAudioEngine!
     
-    private var audioFile: AVAudioFile!
-    private var audioFile2: AVAudioFile!
+//    private var audioFile: AVAudioFile!
+//    private var audioFile2: AVAudioFile!
     
     class Audio:NSObject{
         private var _audioFilePlayer:AVAudioPlayerNode
@@ -56,7 +51,7 @@ class AudioManager : NSObject{
             //delayの作成
             _audioDelay = AVAudioUnitDelay()
             _audioDelay.delayTime = 0.2
-            _audioDelay.feedback = 2
+            _audioDelay.feedback = 4.0
             _audioDelay.lowPassCutoff = 15000
             _audioDelay.wetDryMix = 0
             
@@ -102,6 +97,7 @@ class AudioManager : NSObject{
         func distortionGain(gain:Float){
             _audioDistortion.preGain = gain
         }
+        
 
         func hipass(freq:Float){
             var bandfilterParams = _audioBandFilter.bands[0] as! AVAudioUnitEQFilterParameters
@@ -117,6 +113,9 @@ class AudioManager : NSObject{
         }
         func volume(val:Float){
             _audioFilePlayer.volume = val
+        }
+        func getVolume() -> Float{
+            return _audioFilePlayer.volume
         }
         func pan(val:Float){
             _audioFilePlayer.pan = val
@@ -137,26 +136,26 @@ class AudioManager : NSObject{
     
     
     private override init() {
-        //super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         _audios = []
         
         
         // AVAudioEngineの生成
         audioEngine = AVAudioEngine()
         
-        
+        super.init()
+
         
         // AVAudioFileの生成
-        audioFile = AVAudioFile(forReading: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("audio/track1", ofType: "mp3")!), error: nil)
-        audioFile2 = AVAudioFile(forReading: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("audio/track2", ofType: "mp3")!), error: nil)
-        
-        _audios.append(Audio(audioFile: audioFile, audioEngine: audioEngine))
-        _audios.append(Audio(audioFile: audioFile2, audioEngine: audioEngine))
-        
+        addAudioSource("audio/track1")
+        addAudioSource("audio/track2")
         
         // AVAudioEngineの開始
         audioEngine.startAndReturnError(nil)
+    }
+    
+    func addAudioSource(sourcePath:String){
+        let audioFile = AVAudioFile(forReading: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(sourcePath, ofType: "mp3")!), error: nil)
+        _audios.append(Audio(audioFile: audioFile, audioEngine: audioEngine))
     }
     
     func getAudio(index:Int) -> Audio{
@@ -164,19 +163,14 @@ class AudioManager : NSObject{
     }
     
     func play(){
-//        audioFilePlayer.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-//        audioFilePlayer.play()
-//        
-//        audioFilePlayer2.scheduleFile(audioFile2, atTime: nil, completionHandler: nil)
-//        audioFilePlayer2.play()
-        
+        //play every audio
         for audio in _audios{
             audio.play()
         }
-        //_audios[0].play()
     }
     
     func pause(){
+        //pause every audio
         for audio in _audios{
             audio.pause()
         }
