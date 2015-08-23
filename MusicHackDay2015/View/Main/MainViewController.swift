@@ -13,6 +13,15 @@ class MainViewController: UIViewController, UIPopoverControllerDelegate {
     @IBOutlet weak var btnRefresh: UIBarButtonItem!
     @IBOutlet weak var btnPlay: UIButton!
     
+    @IBOutlet weak var label001: UILabel!
+    @IBOutlet weak var label002: UILabel!
+    @IBOutlet weak var label003: UILabel!
+    @IBOutlet weak var label004: UILabel!
+    @IBOutlet weak var label005: UILabel!
+    @IBOutlet weak var label006: UILabel!
+    
+    
+    
     private var _audio: SPTCoreAudioController?
     private var _player: SPTAudioStreamingController?
     
@@ -138,11 +147,67 @@ class MainViewController: UIViewController, UIPopoverControllerDelegate {
         var data = HvcManager.defaultInstance().getDeviceData()
         if data != nil {
             println("====001")
+            /*
             if data["HumanBody"]?.count > 0 {
-                println("====002")
-                let body = data["HumanBody"]?.first
-                println("===> \(body)")
+                let bodies = data["HumanBody"]
+                let imax = min(bodies!.count, 2)
+                for i:Int in 0..<imax {
+                    let body = bodies![i]
+                    println("====002")
+                    println("===> \(body)")
+                    var size = body["size"]! as Int32
+                    let sizeScale = Float(max(min(size, 300), 0)) / 300 * 100
+                    AudioManager.defaultInstance().getAudio(i).volume(sizeScale)
+                    println("@@@= \(sizeScale)")
+                    
+                    
+                    let x = body["x"]! as Int32
+                    let y = body["y"]! as Int32
+                    if i == 0 {
+                        label001.text = String(size as Int32)
+                        label002.text = String(x as Int32)
+                        label003.text = String(y as Int32)
+                    }
+                }
+                
             }
+            */
+            
+            if data["Face"]?.count > 0 {
+                let faces = data["Face"]
+                let imax = min(faces!.count, 2)
+                for i:Int in 0..<imax {
+                    let face = faces![i]
+                    var size = face["size"]! as Int32
+                    
+                    let sizeScale = Float(max(min(size - HVC_FACE_MIN, 256), 0)) / 256 * 100
+                    AudioManager.defaultInstance().getAudio(i).volume(sizeScale)
+                    
+                    var yaw = face["yaw"]! as Int32
+                    var pitch = face["pitch"]! as Int32
+                    var roll = face["roll"]! as Int32
+                    
+                    let yawSize = Float(max(min(yaw, 20), -20)) / 20
+                    AudioManager.defaultInstance().getAudio(i).pan(yawSize)
+                    
+                    let pitchSize = Float(max(min(pitch + 15, 35), 0)) / 35 * 10000
+                    AudioManager.defaultInstance().getAudio(i).hipass(pitchSize)
+                    
+                    let rollSize = Float(max(min(abs(roll), 15), 0)) / 15 * 100
+                    AudioManager.defaultInstance().getAudio(i).distortion(rollSize)
+                    
+                    if i == 0 {
+                        label001.text = String(yaw)
+                        label002.text = String(pitch)
+                        label003.text = String(roll)
+                    }else{
+                        label004.text = String(yaw)
+                        label005.text = String(pitch)
+                        label006.text = String(roll)
+                    }
+                }
+            }
+            
         }
     }
 

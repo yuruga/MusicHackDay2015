@@ -103,8 +103,8 @@ class HvcManager: NSObject, HVC_Delegate {
         
         //パラメータセット
         let param = HVC_PRM()
-        param.face().setMinSize(60)
-        param.face().setMaxSize(480)
+        param.face().setMinSize(HVC_FACE_MIN)
+        param.face().setMaxSize(HVC_FACE_MAX)
         _hvc.setParam(param)
     }
     
@@ -121,6 +121,7 @@ class HvcManager: NSObject, HVC_Delegate {
         
         var data:Dictionary = Dictionary<String, [Dictionary<String, Int32>]>()
         if err == HVC_ERRORCODE.NORMAL && outStatus == 0 {
+            /*
             // Human body detection
             var humanBody:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
             for i:Int32 in 0..<result.sizeBody() {
@@ -133,7 +134,9 @@ class HvcManager: NSObject, HVC_Delegate {
                 ])
             }
             data["HumanBody"] = humanBody
+            */
             
+            /*
             // Hand detection
             var hand:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
             for i:Int32 in 0..<result.sizeHand() {
@@ -146,14 +149,15 @@ class HvcManager: NSObject, HVC_Delegate {
                 ])
             }
             data["Hand"] = hand
+            */
             
             //Face
             var face:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
-            var age:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
-            var gender:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
-            var gaze:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
-            var blink:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
-            var exp:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
+//            var age:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
+//            var gender:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
+//            var gaze:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
+//            var blink:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
+//            var exp:[Dictionary<String, Int32>] = [Dictionary<String, Int32>]()
             
             for i:Int32 in 0..<result.sizeFace() {
                 let fd = result.face(i)
@@ -168,6 +172,7 @@ class HvcManager: NSObject, HVC_Delegate {
                     "dir_confidence": fd.dir().confidence()
                 ])
                 
+                /*
                 age.append([
                     "age": fd.age().age(),
                     "confidence": fd.age().confidence()
@@ -218,13 +223,14 @@ class HvcManager: NSObject, HVC_Delegate {
                     "score": fd.exp().score(),
                     "degree": fd.exp().degree()
                 ])
+                */
             }
             data["Face"] = face
-            data["Age"] = age
-            data["Gender"] = gender
-            data["Gaze"] = gaze
-            data["Blink"] = blink
-            data["Exp"] = exp
+//            data["Age"] = age
+//            data["Gender"] = gender
+//            data["Gaze"] = gaze
+//            data["Blink"] = blink
+//            data["Exp"] = exp
         }
         
         //最新データ格納
@@ -256,15 +262,15 @@ class HvcManager: NSObject, HVC_Delegate {
         println("@@@=onPostSetParam")
         
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self._executeFlag = HVC_FUNCTION.ACTIV_BODY_DETECTION
-                | HVC_FUNCTION.ACTIV_HAND_DETECTION
-                | HVC_FUNCTION.ACTIV_FACE_DETECTION
+            self._executeFlag = HVC_FUNCTION.ACTIV_FACE_DETECTION
                 | HVC_FUNCTION.ACTIV_FACE_DIRECTION
-                | HVC_FUNCTION.ACTIV_AGE_ESTIMATION
-                | HVC_FUNCTION.ACTIV_GENDER_ESTIMATION
-                | HVC_FUNCTION.ACTIV_GAZE_ESTIMATION
-                | HVC_FUNCTION.ACTIV_BLINK_ESTIMATION
-                | HVC_FUNCTION.ACTIV_EXPRESSION_ESTIMATION
+//                | HVC_FUNCTION.ACTIV_BODY_DETECTION
+//                | HVC_FUNCTION.ACTIV_HAND_DETECTION
+//                | HVC_FUNCTION.ACTIV_AGE_ESTIMATION
+//                | HVC_FUNCTION.ACTIV_GENDER_ESTIMATION
+//                | HVC_FUNCTION.ACTIV_GAZE_ESTIMATION
+//                | HVC_FUNCTION.ACTIV_BLINK_ESTIMATION
+//                | HVC_FUNCTION.ACTIV_EXPRESSION_ESTIMATION
             
             let res = HVC_RES()
             self._hvc.Execute(self._executeFlag, result: res)
