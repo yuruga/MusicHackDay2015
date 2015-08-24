@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  MusicHackDay2015
+//
+//  Created by ichikawa on 2015/08/22.
+//  Copyright (c) 2015年 yuruga. All rights reserved.
+//
+
+#ifndef MusicHackDay2015_PrefixHeader_pch
+#define MusicHackDay2015_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//Config
+#define HVC_DEVICE_KEY @"omron"
+#define HVC_FACE_MIN 64
+#define HVC_FACE_MAX 320
+
+//Event
+#define EVENT_DEVICE_CONNECTED @"event_device_scan_connected"
+#define EVENT_DEVICE_DISCONNECTED @"event_device_disconnected"
+#define EVENT_DEVICE_SCAN_FINISH @"event_device_scan_finish"
+#define EVENT_DEVICE_RECEIVE_DATA @"event_device_receive_data"
+
+//Spotify
+#define SPT_USERNAME @"<Sporify User Name>"
+#define SPT_CLIENT_ID @"<Sporify User Client ID>"
+
+#endif
